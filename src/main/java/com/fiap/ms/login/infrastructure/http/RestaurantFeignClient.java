@@ -5,9 +5,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-
-@FeignClient(name = "restaurant-service", url = "${restaurant.service.url}")
+@FeignClient(name = "restaurant-service", url = "${restaurant.service.url}", configuration = FeignClientConfig.class)
 public interface RestaurantFeignClient {
-    @GetMapping("/restaurants/user/{userId}/exists")
+
+    @GetMapping("/v1/restaurantes/{userId}/exists")
     RestaurantDto userHasRestaurant(@PathVariable("userId") Long userId);
 }
