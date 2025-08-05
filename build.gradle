@@ -56,7 +56,7 @@ tasks.named('test') {
 def exclusionPatterns = [
 		'**/com/fiap/ms/login/infrastructure/dataproviders/database/entities/**',
 		'**/com/fiap/ms/login/domain/model/**',
-		'com/fiap/ms/login/MsLoginApplication.java'
+		'**/com/fiap/ms/login/MsLoginApplication*.*'
 ]
 
 jacocoTestReport {
